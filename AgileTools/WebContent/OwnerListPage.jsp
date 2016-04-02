@@ -9,13 +9,14 @@
 li{
 margin: 1em 3em;
 padding:10px;
+color:black;
 }
 ul{
 margin-left:0;
 padding-left:0;
 }
 a{
-color: whitesmoke;
+color: black;
 text-decoration:none;
 }
 .buttonlink{
@@ -39,7 +40,7 @@ text-decoration:none;
     display: inline-block;
 }
 body{
-color: whitesmoke;
+color: black;
 background-color: #888888;
 }
 input:focus{
@@ -103,9 +104,9 @@ body::-webkit-scrollbar-thumb {
 <a href="abc.html" class="hoverable" target="_top"> Card View </a>
 <hr>
 </div>
-<div id="newdashboard">
+<!--<div id="newdashboard">
 <a class="buttonlink" href="abc.html" target="_top">New Dashboard</a>
-</div>
+</div>-->
 
 </body>
 </html>

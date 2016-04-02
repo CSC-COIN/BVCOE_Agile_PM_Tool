@@ -106,8 +106,8 @@ background-color:#686868;
 <a href="abc.html" class="hoverable" target="_top"> Card View </a>
 <hr>
 </div>
-<div id="newdashboard">
+<!--<div id="newdashboard">
 <a class="buttonlink" href="abc.html" target="_top">New Dashboard</a>
-</div>
+</div>-->
 </body>
 </html>

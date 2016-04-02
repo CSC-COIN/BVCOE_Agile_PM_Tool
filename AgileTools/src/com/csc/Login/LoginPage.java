@@ -45,18 +45,13 @@ public class LoginPage extends HttpServlet {
 		PrintWriter pw=response.getWriter();
 		if("Login".equals(type)){
 			n=request.getParameter("username");
-			System.out.println(n);
 			p=request.getParameter("password");
-			System.out.println(p);
 			boolean lb=lc.validate(n, p);
 			if(lb){
 				all=lc.determine(n);
 				String uclass=all.get(0);
-				System.out.println(uclass);
 				String name=all.get(1);
-				System.out.println(name);
 				String project=all.get(2);
-				System.out.println(project);
 				if("ProductOwner".equals(uclass)){
 				 RequestDispatcher requestDispatcher = request
 		                    .getRequestDispatcher("OwnerDashBoard.jsp");
