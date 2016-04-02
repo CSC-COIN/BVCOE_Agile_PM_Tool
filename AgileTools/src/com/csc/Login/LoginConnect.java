@@ -134,11 +134,8 @@ public class LoginConnect implements Serializable {
     		udetails.clear();
     		while(rs.next()){
     			uclass=rs.getString("UserClass");      udetails.add(uclass);
-    			System.out.println(uclass);
     			uname=rs.getString("FirstName");       udetails.add(uname);
-    			System.out.println(uname);
-    			uproject=rs.getString("ProjectName");  udetails.add(uproject);
-    			System.out.println(uproject);
+    			uproject=rs.getString("ProjectName");  udetails.add(uproject);	
     		}
     		rs.close();
     	} catch (ClassNotFoundException e) {

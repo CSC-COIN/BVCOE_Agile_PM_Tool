@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
+<%@ page import="java.sql.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -80,13 +79,8 @@ background-color:#686868;
 </style>
 
 <body>
-<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
-     url="jdbc:mysql://localhost:3306/agiletool"
-     user="root"  password="rootpassword"/>
-     
-     <sql:query dataSource="${snapshot}" var="result">
-     SELECT * from LoginDetails;
-     </sql:query>
+
+
 <ul>
   <li><a class="active" href="#home">Report</a></li>
   <li><a class="active" href="#userguide">User Guide</a></li>
@@ -149,6 +143,67 @@ background-color:#686868;
 	 <th>Progress</th>
 	 <th>Dates</th>
   </tr>
+<%
+Connection conn=null;
+ResultSet rs=null;
+Statement stmt=null;
+String JDBC_DRIVER= "com.mysql.jdbc.Driver";
+String DR_URL = "jdbc:mysql://localhost:3306/agiletool";
+String USERNAME = "root";
+String PASSWORD = "rootpassword";
+String name=(String)session.getAttribute("userid");
+String query="select * from "+ name;
+try {
+	Class.forName(JDBC_DRIVER);
+	conn = DriverManager.getConnection(DR_URL, USERNAME, PASSWORD);	
+	stmt = conn.createStatement();
+    rs = stmt.executeQuery(query);
+    while(rs.next())
+    { %>
+    	<tr>
+                <td> <%= rs.getString(1) %></td>
+                <td> <%= rs.getString(2) %></td>
+                <td> <%= rs.getString(3) %></td>
+                <td> <%= rs.getString(4) %></td>
+                <td> <%= rs.getString(5) %></td>
+            </tr>
+    	
+ <% }%>
+ <%
+   }catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	finally{
+		if(conn!=null){
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		if(stmt!=null){
+			try {
+				stmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		if(rs!=null){
+			try {
+				rs.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+%>
  
 </table>
 </div>
