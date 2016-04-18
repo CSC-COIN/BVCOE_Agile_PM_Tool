@@ -1,0 +1,145 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	-webkit-backface-visibility:hidden;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1); 
+}
+.top{
+background-color: #888888;
+text-align:center;
+margin:0;
+padding:0;
+}
+h1{
+position:absolute;
+color:lightgreen;
+font-size:50px;
+font-family: "Arial Black", Gadget,sans-serif;
+top:12px;
+left:80px;
+}
+#toppara{
+position:absolute;
+top:150px;
+left:250px;
+color:white;
+font-size:20px;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+#login{
+position:absolute;
+background-color:#0066CC;
+color:white;
+font-weight:bold;
+border-radius:3px;
+border-color:black;
+padding: 2px 5px 2px 5px;
+top:27px;
+right:50px;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Open Sans', arial;
+    color: #555;
+    font-size: 38px;
+    font-weight: 300;
+    margin-top: 27px;
+    margin-bottom: 50px;
+}
+.sign-up{
+position:absolute;
+right:20px;
+background-color:#B8B8B8;
+margin:8px;
+padding: 10px 10px 10px 10px;
+}
+fieldset{
+padding:8px 15px 10px 15px;
+}
+input[type=text]{
+height:20px;
+margin:5px;
+}	
+input[type=password]{
+height:20px;
+margin:5px;
+}
+input[type=submit]{
+position:absolute;
+bottom:1px;
+right:20px;
+color:white;
+background-color:#0099FF;
+padding: 5px 3px 5px 3px; 
+font-weight:bold;
+}
+input[type=submit]:hover{
+background-color:#0066FF;
+}
+input:focus{
+border-style:inset;
+}
+legend{
+font-weight:bold;
+padding:5px 5px 1px 5px;
+}
+a{
+text-decoration:none;
+color:#0066FF;
+}
+a:hover{
+color:#0033FF;
+}
